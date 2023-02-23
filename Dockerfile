@@ -26,4 +26,4 @@ COPY --chown=django:django . .
 
 # Collect static files and serve app
 RUN python3 manage.py collectstatic --no-input
-CMD waitress-serve --port=$PORT growtal_35169.wsgi:application
+CMD waitress-serve --port=$PORT zero_cheating.wsgi:application

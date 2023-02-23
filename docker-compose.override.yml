@@ -20,15 +20,15 @@ services:
   redis:
     ports:
       - "6379:6379"
-  celery:
-    build:
-      context: .
-    user: django
-    command: celery -A growtal_35169 worker --beat --scheduler django --loglevel=info
-    depends_on:
-      - web
-      - postgres
-      - redis
+  # celery:
+  #   build:
+  #     context: .
+  #   user: django
+  #   command: celery -A zero_cheating worker --beat --scheduler django --loglevel=info
+  #   depends_on:
+  #     - web
+  #     - postgres
+  #     - redis
 volumes: 
   postgres-data:
 

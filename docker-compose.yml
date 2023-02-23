@@ -12,7 +12,7 @@ services:
     build:
       context: .
     user: django
-    command: celery -A growtal_35169 worker --beat --scheduler django --loglevel=info
+    command: celery -A zero_cheating worker --beat --scheduler django --loglevel=info
     depends_on:
       - web
       - postgres

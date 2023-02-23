@@ -42,7 +42,7 @@ class AccountAdapter(DefaultAccountAdapter):
         email_plaintext_message = render_to_string('email/email_confirmation_signup_subject.txt', context)
         msg = EmailMultiAlternatives(
             # title:
-            "Confirm GrowTal Account!",
+            "Confirm zero_cheating Account!",
             # message:
             email_plaintext_message,
             # from:

@@ -1,4 +1,4 @@
-# growtal_35169
+# zero_cheating
 
 This is a repository for a web application developed with Django, built with [Crowdbotics](https://crowdbotics.com)
 
@@ -18,7 +18,7 @@ This is a repository for a web application developed with Django, built with [Cr
     ..
     ├── home                           # Starter home app
     ├── modules                        # Crowdbotics Modules app
-    ├── growtal_35169  # Django project configurations
+    ├── zero_cheating  # Django project configurations
     ├── static                         # Static assets
     ├── users                          # Starter users app
     ├── web_build                      # React Native Web build
@@ -50,7 +50,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 1. Install Docker:
    - Linux - [get.docker.com](https://get.docker.com/)
    - Windows or MacOS - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-1. Clone this repo and `cd growtal_35169`
+1. Clone this repo and `cd zero_cheating`
 1. Make sure `Pipfile.lock` exists. If it doesn't, generate it with:
    ```sh
    $ docker run -it --rm -v "$PWD":/django -w /django python:3.7 pip3 install --no-cache-dir -q pipenv && pipenv lock
@@ -90,7 +90,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
 ### Installation
 
 1. Install [pipenv](https://pypi.org/project/pipenv/)
-2. Clone this repo and `cd growtal_35169`
+2. Clone this repo and `cd zero_cheating`
 3. Run `pip install --user --upgrade pipenv` to get the latest pipenv version.
 4. Run `pipenv --python 3.6`
 5. Run `pipenv install`

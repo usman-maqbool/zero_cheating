@@ -9,7 +9,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.dispatch import receiver
 from django.template.loader import render_to_string
 from django_rest_passwordreset.signals import reset_password_token_created
-from growtal_35169.settings import BASE_URL_FRONTEND
+from zero_cheating.settings import BASE_URL_FRONTEND
 from django.conf import settings
 
 
@@ -158,7 +158,7 @@ def password_reset_token_created(sender, instance, reset_password_token, *args, 
 
     msg = EmailMultiAlternatives(
         # title:
-        "Password Reset for {title}".format(title="Growtal"),
+        "Password Reset for {title}".format(title="Zero Cheating"),
         # message:
         email_plaintext_message,
         # from:

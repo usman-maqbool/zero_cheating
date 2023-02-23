@@ -5,3 +5,4 @@ pipenv==2022.12.19
 platformdirs==2.6.2
 virtualenv==20.17.1
 virtualenv-clone==0.5.7
+Django==4.1.7
