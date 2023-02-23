@@ -1,0 +1,10 @@
+*.pyc
+env/
+.terraform
+.env
+staticfiles/
+postgres-data/
+venv/
+growtal_35169/local_settings.py
+*.sqlite3
+/media/

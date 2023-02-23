@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @media (max-width:768px) {
+            .gt-container {
+                max-width: 500px !important;
+            }
+
+            .logo-img {
+                padding: 20px 25px !important;
+            }
+
+            .logo-img img {
+                width: 180px !important;
+            }
+
+            .content-section {
+                padding: 20px 30px !important;
+            }
+
+            p {
+                font-size: 14px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .gt-btn {
+                font-size: 14px !important;
+                padding: 10px 16px !important;
+            }
+
+            .button-wrapper {
+                margin-bottom: 20px !important;
+            }
+
+            .line {
+                padding-top: 0 !important;
+            }
+
+            .gt-team, .no-reply {
+                font-size: 14px !important;
+            }
+
+            .logo-details img {
+                width: 60px !important;
+                padding-right: 5px !important;
+            }
+        }
+
+        @media (max-width:576px) {
+            .header-bg {
+                padding: 8px 0 !important;
+            }
+
+            .gt-container {
+                max-width: 85% !important;
+            }
+
+            .logo-img {
+                padding: 15px 20px !important;
+            }
+
+            .logo-img img {
+                width: 150px !important;
+            }
+
+            .content-section {
+                padding: 15px 20px !important;
+            }
+
+            p {
+                font-size: 12px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .gt-btn {
+                font-size: 12px !important;
+                padding: 8px 14px !important;
+            }
+
+            .button-wrapper {
+                margin-bottom: 15px !important;
+            }
+
+            .line {
+                padding-top: 0 !important;
+            }
+
+            .gt-team, .no-reply {
+                font-size: 12px !important;
+            }
+
+            .logo-details img {
+                width: 50px !important;
+                padding-right: 0px !important;
+            }
+
+            .contact-section {
+                font-size: 10px !important;
+                padding: 20px 0 0 !important;
+            }
+
+            .list {
+                margin-top: 5px !important;
+            }
+        }
+
+        @media (max-width:400px) {
+            .gt-container {
+                max-width: 85% !important;
+            }
+
+            .logo-img {
+                padding: 15px !important;
+            }
+
+            .logo-img img {
+                width: 130px !important;
+            }
+
+            .content-section {
+                padding: 15px !important;
+            }
+
+            p {
+                font-size: 10px !important;
+                margin-bottom: 12px !important;
+                line-height: 1.5 !important;
+            }
+
+            .gt-btn {
+                font-size: 10px !important;
+                padding: 6px 12px !important;
+            }
+
+            .button-wrapper {
+                margin-bottom: 12px !important;
+            }
+
+            .line {
+                padding-top: 0 !important;
+            }
+
+            .gt-team, .no-reply {
+                font-size: 10px !important;
+            }
+
+            .logo-details img {
+                width: 40px !important;
+                padding-right: 0px !important;
+            }
+
+            .contact-section {
+                font-size: 8px !important;
+                padding: 15px 0 0 !important;
+            }
+
+            .list {
+                margin-top: 5px !important;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .gt-container {
+                max-width: 90% !important;
+            }
+
+            .contact-section {
+                font-size: 7px !important;
+                padding: 15px 0 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="gt-email-section" style="
+        background-color: #eee;
+        padding: 10px 0 20px;
+        font-family: 'Lato' !important;
+        ">
+        <div class="gt-container" style="max-width: 600px;
+            width: 100%;
+            height: 100%;
+            margin: 10px auto;
+            ">
+            <div class="main-section" style="background-color: #fff;">
+                <div class="header-bg" style="
+                    background-image: url(http://{{ request_host }}{% static 'images/header-bg.png' %});
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    padding: 14px 0;
+                    ">
+                    <div class="logo-img" style="padding: 30px 40px;">
+                        <img src="http://{{ request_host }}{% static 'images/horizontal-logo.png' %}" alt="Growtal" style="width: 192px; height: auto;"/>
+                    </div>
+
+                </div>
+                <div class="content-section" style="padding: 20px 40px;">
+                    <div class="content-details">
+                        <p style="line-height: 1.75; margin-bottom: 20px;">Hi {sender},</p>
+                        <p class="description" style="line-height: 1.75;margin-bottom: 30px;">
+                            We have a potential client that could use your expertise! Check out the details below
+                        </p>
+                        <p>If this is something you’d like to be considered 
+                            for, we’re happy to pass your info along! We 
+                            currently have your hourly rate set at 
+                            {Expert Hourly Rate} + our 30% GrowTal fee charged
+                             to the client.
+                        </p>
+                        <p>Let us know if you are interested and we will pass your information along!</p>
+                        <p>Thanks, <br> 
+                            GrowTal Team
+                            </p>
+                    </div>
+                </div>
+                <div class="bottom-section" style="
+                padding: 0 20px 20px;
+                ">
+                    <div class="logo-details" style="display: table; vertical-align: middle;">
+                        <img src="http://{{ request_host }}{% static 'images/logo.jpg' %}" alt="Growtal"
+                            style="width: 80px; height: auto; vertical-align: middle; padding-right: 10px;">
+                        <div class="gt-team" style="
+                        display: inline-block;
+                        vertical-align: middle;
+                        ">
+                            <span><strong>Growtal Team</strong></span> <br>
+                            <a href="#" style="color: #51A5BE;">GrowTal.com</a>
+                        </div>
+                    </div>
+                    <div class="no-reply" style="margin-top: 10px; margin-left: 10px;">*Do Not Reply to this Email</div>
+                </div>
+            </div>
+            <div class="contact-section"
+                style="padding: 20px 0; font-size: 12px; color: #23496d; word-spacing: 2px; text-align: center;">
+                <div class="address">GrowTal, 444 S. Flower Street, 13th Floor, Los Angeles, CA 90071</div>
+                <div class="list" style="margin-top: 10px;">
+                    <a href="#" style="margin-right: 4px;">Unsubscribe</a>
+                    <a href="#">Manage Preferences</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
